@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "b0e13b67-dcba-4c7a-9fe5-4fc06e6b4903",
+		"name": "API Karyawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23712389"
+	},
+	"item": [
+		{
+			"name": "Insert Karyawan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\":\"Dede Firmansah\",\r\n    \"umur\":\"22\",\r\n    \"alamat\":\"Jl H.Sabeni\",\r\n    \"jabatan\":\"Senior Project\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/karyawan/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"karyawan",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Karyawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/karyawan",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"karyawan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Karyawan by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/karyawan/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"karyawan",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2121212"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Karyawan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "asasaasasas",
+							"type": "text"
+						},
+						{
+							"key": "umur",
+							"value": "212",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jakak",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "hahahah",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/karyawan/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"karyawan",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Karyawan",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
